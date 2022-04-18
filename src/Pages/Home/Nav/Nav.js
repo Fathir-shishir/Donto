@@ -8,8 +8,11 @@ import './Nav.css'
 const Nav = () => {
     const [user, loading, error] = useAuthState(auth);
     return (
-        <div className='container'>
-        <nav className='bg-white d-flex justify-content-center align-items-center row p-2'>
+        <div className='bg-head  '>
+        <div className='container-fluid'>
+
+        
+        <nav className='d-flex justify-content-center align-items-center row p-2'>
 
         <div className="col-lg-4">
            <h1>DANTA</h1>
@@ -32,6 +35,7 @@ const Nav = () => {
         </div>
         
         </nav>
+        </div>
         </div>
         
     );

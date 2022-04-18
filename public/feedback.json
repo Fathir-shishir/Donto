@@ -1,0 +1,44 @@
+[
+  {
+    "id": "623dde6f8252fb000682500b",
+     "name":"Complete Dentistry",
+    "picture": "https://donto-react.netlify.app/static/media/dentistry.d3c700d9.svg",
+    "price": 10000,
+    "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur"
+  },
+  {
+    "id": "623dde6fd271a10880bd6fd5",
+    "name":"Dental Selants",
+    "picture": "https://donto-react.netlify.app/static/media/selants.ee98a54b.svg",
+    "price": 5000,
+    "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur"
+  },
+  {
+    "id": "623dde6fb5133855c27205e3",
+    "name":"Dental Dictionary",
+    "picture": "https://donto-react.netlify.app/static/media/dictionary.5266e97b.svg",
+    "price": 15000,
+    "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur"
+  },
+  {
+    "id": "623dde6f4e75d2d6743ccbfa",
+    "name":"Dental Implants",
+    "picture": "https://donto-react.netlify.app/static/media/implants.629b6ebf.svg",
+    "price": 15000,
+    "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur"
+  },
+  {
+    "id": "623dde6f660ecbde18d81734",
+    "name":"Oral Surgery",
+    "picture": "https://donto-react.netlify.app/static/media/oral.1b014515.svg",
+    "price": 20000,
+    "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur"
+  },
+  {
+    "id": "623dde6f87fbea495822e1a4",
+    "name":"General Dentistry",
+    "picture": "https://donto-react.netlify.app/static/media/general.3870bdc7.svg",
+    "price": 25000,
+    "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur"
+  }
+]

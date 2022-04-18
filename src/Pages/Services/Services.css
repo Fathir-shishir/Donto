@@ -1,0 +1,13 @@
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2em;
+   
+    
+}
+.services-container img{
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin:  0 auto;
+}
