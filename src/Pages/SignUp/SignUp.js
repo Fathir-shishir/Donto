@@ -90,6 +90,7 @@ const [
   </Button>
   <div className='mt-2'>
       <p>Alread have account? <Link to="/signIn">  Please Sign In</Link></p>
+      <p>{Eerror?.message}</p>
   </div>
 </Form>
  <AuthWithSocial></AuthWithSocial>
