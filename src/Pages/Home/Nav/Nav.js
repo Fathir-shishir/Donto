@@ -22,6 +22,7 @@ const Nav = () => {
         <CustomLink  className="mx-2" to="/services">Services</CustomLink>
         <CustomLink  className="mx-2" to="/appointment">Appointment</CustomLink>
         <CustomLink  className="mx-2" to="/about">about</CustomLink>
+        <CustomLink  className="mx-2" to="/blogs">Blogs</CustomLink>
         {
             user? <button onClick={()=>signOut(auth)} className="mx-2 btn btn-link p-0 m-0" > Sign Out(
                 <small>{user.email}</small>
