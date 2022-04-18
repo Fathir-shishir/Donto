@@ -15,7 +15,7 @@ const Nav = () => {
         <nav className='d-flex justify-content-center align-items-center row p-2'>
 
         <div className="col-lg-4">
-           <h1>DANTA</h1>
+           <img src="https://donto-react.netlify.app/static/media/dentistry.d3c700d9.svg"  alt="" /> 
         </div>
         <div className="col-lg-8 d-flex justify-content-end">
         <CustomLink className="mx-2" to="/">Home</CustomLink>
@@ -23,7 +23,7 @@ const Nav = () => {
         <CustomLink  className="mx-2" to="/appointment">Appointment</CustomLink>
         <CustomLink  className="mx-2" to="/about">about</CustomLink>
         {
-            user? <button onClick={()=>signOut(auth)} className="mx-2 btn btn-link p-0 m-0" > Sign Up(
+            user? <button onClick={()=>signOut(auth)} className="mx-2 btn btn-link p-0 m-0" > Sign Out(
                 <small>{user.email}</small>
             ) 
             </button> :

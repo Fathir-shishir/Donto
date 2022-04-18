@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
+import CustomLink from '../Home/CustomLink/CustomLink';
 
 const Service = ({service}) => {
     const{comment,price,picture,name} = service
@@ -22,9 +23,12 @@ const Service = ({service}) => {
       <Card.Text>
       {comment }
       </Card.Text>
+      <Card.Text> Price :
+      {price }
+      </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
+    <CustomLink className='btn btn-primary text-center ' to='/appointment'> Take an Appoiment</CustomLink>
     </Card.Footer>
   </Card>
   

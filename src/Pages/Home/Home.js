@@ -1,9 +1,13 @@
 import React from 'react';
+import useServices from '../../Hooks/useServices';
+import Service from '../Service/Service';
+import CustomLink from './CustomLink/CustomLink';
 import './Home.css'
 import Nav from './Nav/Nav';
 
 const Home = () => {
     const[services,setServices] =useServices()
+    const newservices= services.slice(0,3)
     return (
         
         <div>
@@ -40,6 +44,21 @@ const Home = () => {
        </div>
        </div>
        </div>
+       <div className='container mt-4'>
+        <div className='services-container'>
+            {
+                newservices.map(service=><Service 
+                key={service.id}
+                service={service}
+                ></Service>)
+            }
+            
+         </div>
+            
+        </div>
+        <div className=' m-4 text-center'>
+              <CustomLink className='btn btn-primary text-center ' to='/services'> See All Services</CustomLink>
+            </div>
         </div>
 
     );
