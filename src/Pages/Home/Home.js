@@ -21,9 +21,9 @@ const Home = () => {
         
        <div className="col-md-6 ">
            <div >
-           <h3>Better Life Through</h3>
-           <h1>Better Dentistry</h1>
-           <p>Join us to a fun and friendly dental environment. Our professionals are working so hard to see smile on your face that you deserve! We are dedicated about our duties.</p>
+           <h3 className='text-white'>Better Life Through</h3>
+           <h1 className='text-white'>Better Dentistry</h1>
+           <p className='text-white'>Join us to a fun and friendly dental environment. Our professionals are working so hard to see smile on your face that you deserve! We are dedicated about our duties.</p>
            <div className="btn-header d-flex ">
                <button className='btn btn-primary mx-2'>Appoinment</button>
                <button className='btn btn-primary'>Learn More</button>
