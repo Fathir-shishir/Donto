@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import AuthWithSocial from '../AuthWithSocial/AuthWithSocial';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const SignIn = () => {
     const [email,setEmail]= useState('')
@@ -11,6 +13,9 @@ const SignIn = () => {
     const location = useLocation()
     const navigate = useNavigate()
     let from = location.state?.from?.pathname || "/";
+    const [sendPasswordResetEmail, sending, eError] = useSendPasswordResetEmail(
+      auth
+    );
     const [
         signInWithEmailAndPassword,
         user,
@@ -20,6 +25,12 @@ const SignIn = () => {
 
       if(user){
         navigate(from, { replace: true });
+    }
+    const resetPassword =(event)=>{
+      if(email){
+        sendPasswordResetEmail(email)
+        toast("Email send!")
+      }
     }
  const handelEmailOnblur =(event)=>{
     setEmail(event.target.value)
@@ -33,7 +44,7 @@ const SignIn = () => {
     console.log(user)
  }
     return (
-        <div>
+        <div className='vh-100'>
             <Form onSubmit={handleSubmitForm} className='w-50 d-block mx-auto mt-5'>
   <Form.Group  className="mb-3" controlId="formBasicEmail">
    <Form.Control onBlur={handelEmailOnblur} required type="email"   placeholder="Enter email" />
@@ -47,12 +58,14 @@ const SignIn = () => {
   <Button variant="primary" type="submit">
     Submit
   </Button>
+   <button className='btn btn-link' onClick={resetPassword} > Forget Password?</button>
   <div className='mt-2'>
       <p>Do't have account? <Link to="/signUp">  Please Sign Up</Link></p>
+      
   </div>
+  <ToastContainer />
 </Form>
 
- <AuthWithSocial></AuthWithSocial>
         </div>
         
         
